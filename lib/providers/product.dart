@@ -1,4 +1,5 @@
 import 'package:flutter/foundation.dart';
+import 'package:flutter/widgets.dart';
 
 class Product with ChangeNotifier {
   final String id;
@@ -14,5 +15,10 @@ class Product with ChangeNotifier {
       @required this.description,
       @required this.price,
       @required this.imageUrl,
-      this.isFavorite});
+      this.isFavorite = false});
+
+  void toogleFavorite() {
+    isFavorite = !isFavorite;
+    notifyListeners();
+  }
 }
