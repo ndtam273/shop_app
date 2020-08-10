@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 
 import './screens/products_overview_screen.dart';
 import './screens/product_detail_screen.dart';
+import './screens/cart_screen.dart';
 
 import './providers/products.dart';
 import './providers/cart.dart';
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
             primarySwatch: Colors.purple,
             accentColor: Colors.deepOrange,
             canvasColor: Color.fromRGBO(255, 254, 229, 1),
-            fontFamily: 'Anton',
+            fontFamily: 'Anton-Regular',
             textTheme: ThemeData.light().textTheme.copyWith(
                   bodyText1: TextStyle(
                     color: Color.fromRGBO(20, 51, 51, 1),
@@ -37,12 +38,13 @@ class MyApp extends StatelessWidget {
                   ),
                   headline6: TextStyle(
                       fontSize: 20,
-                      fontFamily: 'Lato',
+                      fontFamily: 'Lato-Bold',
                       fontWeight: FontWeight.bold),
                 )),
         home: ProductsOverviewScreen(),
         routes: {
           ProductDetailScreen.routeName: (ctx) => ProductDetailScreen(),
+          CartScreen.routeName: (ctx) => CartScreen(),
         },
       ),
     );
