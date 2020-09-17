@@ -27,8 +27,9 @@ class AppDrawer extends StatelessWidget {
             leading: Icon(Icons.payment),
             title: Text('Your Orders '),
             onTap: () {
-              Navigator.of(context)
-                  .pushReplacementNamed(OrdersScreen.routeName);
+              // Navigator.of(context)
+              //     .pushReplacementNamed(OrdersScreen.routeName);
+              Navigat
             },
           ),
           Divider(),
@@ -48,7 +49,6 @@ class AppDrawer extends StatelessWidget {
               Navigator.of(context).pop();
               Navigator.of(context).popAndPushNamed('/');
               Provider.of<Auth>(context, listen: false).logout();
-              
             },
           ),
         ],
